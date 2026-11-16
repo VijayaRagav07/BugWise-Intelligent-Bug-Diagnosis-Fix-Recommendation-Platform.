@@ -1,0 +1,26 @@
+﻿# Python Bytecode & Environments
+__pycache__/
+**/__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Large Datasets, Databases & Runtime Artifacts
+Backend/data/raw/*
+!Backend/data/raw/.gitkeep
+Backend/data/uploads/*
+!Backend/data/uploads/.gitkeep
+Backend/data/defects.db
+*.txt
+*.csv
+*.zip
+
+# Frontend Dependencies & Build
+Frontend/node_modules/
+Frontend/dist/
+
+# Environment & OS
+.env
+.DS_Store
+Thumbs.db
+.vscode/

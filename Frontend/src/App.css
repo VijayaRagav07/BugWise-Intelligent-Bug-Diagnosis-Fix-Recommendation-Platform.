@@ -1,0 +1,253 @@
+:root {
+  --indigo: #1e1b4b;
+  --indigo-light: #312e81;
+  --gold: #b45309;
+  --gold-bg: #fef3c7;
+  --parchment: #fdfbf7;
+  --surface: #ffffff;
+  --border: #e5e0d8;
+  --text-main: #1c1917;
+  --text-muted: #57534e;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--parchment);
+  color: var(--text-main);
+}
+
+.top-header {
+  background-color: var(--indigo);
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-bottom: 4px solid var(--gold);
+}
+
+.header-inner,
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #fcd34d;
+}
+
+.top-header h1 {
+  margin: 0.35rem 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #c7d2fe;
+  font-size: 0.95rem;
+}
+
+.main-content {
+  padding: 1.75rem 1.5rem 3rem;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.65rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--indigo);
+  color: #ffffff;
+  border-color: var(--indigo);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  box-shadow: 0 2px 8px rgba(30, 27, 75, 0.04);
+}
+
+.panel-header h2 {
+  margin: 0 0 0.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--indigo);
+  font-size: 1.35rem;
+}
+
+.panel-header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+input, textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fffdfa;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--indigo);
+  border-color: transparent;
+}
+
+.code-input {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.primary-btn {
+  background: var(--indigo);
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.35rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.primary-btn:hover { background: var(--indigo-light); }
+.primary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.search-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.search-row input { flex: 1; }
+
+.results-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.record-card {
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--indigo);
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+  background: var(--parchment);
+}
+
+.record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bug-tag {
+  font-family: Consolas, monospace;
+  font-weight: 700;
+  color: var(--indigo);
+}
+
+.gold-pill {
+  background: var(--gold-bg);
+  color: var(--gold);
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.neutral-pill {
+  background: #e7e5e4;
+  color: #44403c;
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.record-body {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #292524;
+}
+
+.record-desc { margin: 0.25rem 0 0.5rem; font-size: 0.92rem; }
+
+.exception-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.ex-chip {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+}
+
+.banner {
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.banner.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.banner.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-style: italic;
+}
